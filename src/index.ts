@@ -7,9 +7,9 @@ config();
 
 const {
   BIGTIME_IP_ADDRESS,
-  BIGTIME_PASSWORD,
-  BIGTIME_USERNAME,
   BOOSH_DISCORD_USER_ID,
+  DISC_CHECKER_PASSWORD,
+  DISC_CHECKER_USERNAME,
   DISCORD_BOT_TOKEN,
   JP_DISCORD_USER_ID,
 } = process.env;
@@ -26,8 +26,8 @@ client.once('ready', async () => {
 
       await ssh.connect({
         host: BIGTIME_IP_ADDRESS,
-        username: BIGTIME_USERNAME,
-        password: BIGTIME_PASSWORD,
+        username: DISC_CHECKER_USERNAME,
+        password: DISC_CHECKER_PASSWORD,
       });
 
       const { stdout } = await ssh.execCommand('df -h /dev/vda1');
