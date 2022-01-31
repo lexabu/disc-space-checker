@@ -20,7 +20,7 @@ const client = new Client({
 
 client.once('ready', async () => {
   const scheduledMessage = new cron.CronJob(
-    '00 9 * * *',
+    '* * * * *',
     async () => {
       const ssh = new NodeSSH();
 
